@@ -1,0 +1,141 @@
+hackp.ac/mlh-loves-hackdavis
+free domain mlh
+hackp.ac github
+
+hackdavis live
+//
+
+
+GCP google cloud platform 
+	Google Map APIS
+		Draw a route on a map.
+		Draw a route between two or more specified points on the map showing the distance and travel time, using various forms of transport: walking, driving, cycling, public transit, and flying.
+		Get directions data from origin to destination using various forms of transport: walking, driving, cycling, public transit.
+		Calculate the travel distance and travel time for multiple origins and destinations, optionally specifying various forms of transport: walking, driving, cycling.
+			AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+		
+
+		Draw polygons, rectangles, polylines, circles, markers, and info windows (popups) on a map.
+		Add interactive Street View panoramas to your application, set the location of the panorama, manipulate the Street View camera (point of view), and more.
+		Open the Google Maps app on iOS, Android, or web, via a URL. This is a handy way to launch Google Maps from an app, an email message, or a web page. For example, launch the Maps app with a directions request, to give your users access to turn-by-turn navigation.
+		
+				
+		
+
+Carpool App 
+
+Name
+
+Example Run(s)
+1. Typical 15 person, 3 hives
+2. Everyone can drive
+
+GEOLOCATION API:
+
+https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+	Google Building 41
+	1600 Amphitheatre Pkwy
+https://maps.googleapis.com/maps/api/geocode/json?address=1660%20Drew%20Circle,%20Davis,%20CA&key=AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+							  |  "1660 Drew Circle, Davis, CA"   |
+	1660 Drew Circle, Davis, CA
+	
+
+
+DISTANCE API:
+Latitude: 38.5376 | Longitude: -121.72634 {1660 Drew Circle}
+	38.5376,-121.72634 
+Latitude: 38.568645 | Longitude: -121.5538 {Boathouse}
+	38.568645,-121.5538
+
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626&key=AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+	from Washington DC to arbritary destinations                                                       |                          |          
+
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=38.5376,-121.72634&destinations=38.568645,-121.5538&key=AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+	from 1660 to boathouse
+%2C For comma
+%7C For pair
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=40.6905615,-73.9976592|40.6905615,-73.9976592&key=AIzaSyAdXCiGhcQeNXQJG6cq9utetQFAo8wJl5A
+	40.6905615,-73.9976592|40.6905615,-73.9976592
+		will work for multiple destionations
+
+
+INPUT:
+	User information Entry:
+	Address
+	Able to drive?
+		How many can you drive?
+	Final Destination
+
+
+MAP SYSTEM:
+	Pinning system
+	Street navigation
+
+Data structures:
+	holds user information
+	1 class(Drive):
+	2 class(Rider):
+		
+
+Future addon:
+Gas mileage tracker
+Live tracker
+Directions
+
+Overview:
+"Carpool App" is a carpooling service for groups of any size (Varying from 15 to 200+~). Imagine you are a sports coach and almost everyday your 
+athletes show up late because of slow, inefficient carpools (THis is the exact situation where the origin of "Carpool App")The app will take in the information
+of all the athletes and make carpools that will save time and gas, resulting in an easier life routine and a cleaner, more breathable earth. You do not
+need to be a coach of a team of 50 to use the app, you can be a handful of students simply getting to class, you can be a manager of a large company of 200 trying
+to get employees on time and be more interactive with each other. Carpooling is a great thing to participate in and the "Carpool App" will make the process even easier. 
+
+//
+Google Cloud Platform
+
+lets you do shit
+
+App Engine
+Buid and deploy web application 
+Python Node.js, Ruby, Java, PHP, Go, .NET
+
+STORE API
+DATASTORE API	
+
+GOOGLE CLOUD STORAGE JSON API
+GOOGLE CLOUD DATASTORE
+
+search storage, create bucket, create, created cloudstorage bucket
+bucket are used to organize files
+	photos, infromation about different people, text files
+tell which bucket we are using...
+	terminal: export cloudstoragebucket=hack-davis-3
+			set cloudsoragebucket for WINDOWS
+setup authentication. need information to use web APIS
+
+setup googlecloud SDK, gccloud init
+	which google account which google project
+setup app engine project now
+	when you want to create an app engine project
+	gcloud app create
+set up service account so i can get proper credentials
+	search for service accont, create new service account
+	download JSON key file, 
+		servce-account.json in VISION(PROJECT) folder
+export GOOGLE_APPLICATION_CREDENTIALS=service acount.json
+
+gcloud auth application-login
+
+managers third party dependenices on PYTHON 
+	different versiomn of different libraries VIRTAUL ENV
+
+virtualenv env
+
+
+APP ENGINE HOST
+
+PSEDUO CODE
+
+Read inputs
+INPUTS ARE CSV with addresses and able drivers 
+
+convert addresses to LL
